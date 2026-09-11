@@ -1,0 +1,647 @@
+/* Main colours and settings */
+:root {
+    --background: #0f1724;
+    --card: #0b1220;
+    --accent: #ff6b6b;
+    --text: #e6eef8;
+    --muted: #94a3b8;
+}
+
+/* Basic page setup */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #071427, #0f1724);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* Main container */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 18px;
+}
+
+/* Header */
+header {
+    padding: 28px 12px;
+    margin: 18px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 6px;
+}
+
+header p {
+    color: var(--muted);
+    margin-bottom: 12px;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+nav a {
+    color: var(--text);
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--accent);
+}
+
+/* Navigation icons */
+.nav-icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.02);
+    color: var(--text);
+    text-decoration: none;
+}
+
+.icon-btn:hover {
+    color: var(--accent);
+}
+
+/* Headings and paragraphs */
+h2 {
+    font-size: 1.25rem;
+    margin: 18px 0;
+}
+
+h3 {
+    font-size: 1rem;
+    margin: 12px 0;
+}
+
+p {
+    color: var(--muted);
+    margin-bottom: 12px;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Product cards */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+}
+
+.card {
+    background: var(--card);
+    padding: 18px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+/* Product prices */
+.price {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.original {
+    color: #777;
+    text-decoration: line-through;
+}
+
+.sale {
+    color: var(--accent);
+}
+
+.discount-badge {
+    margin-left: auto;
+    background: var(--accent);
+    color: #07101a;
+    padding: 6px 8px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* About page */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+.about-item {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+.about-item img {
+    width: 220px;
+}
+
+.about-details {
+    color: var(--muted);
+}
+
+/* Store table */
+.store-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+}
+
+.store-table th,
+.store-table td {
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 12px;
+    text-align: left;
+}
+
+.store-table th {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+/* Map */
+.map-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.map-wrap {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.map-wrap iframe {
+    width: 100%;
+    height: 260px;
+    border: 0;
+}
+
+/* Buttons */
+.btn {
+    background: var(--accent);
+    color: #111;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Form fields */
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: transparent;
+    color: var(--text);
+}
+
+/* Footer */
+footer {
+    color: var(--muted);
+    text-align: center;
+    padding: 18px;
+    margin-top: 22px;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+/* Tablet */
+@media (min-width: 600px) {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .container {
+        padding: 24px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    header {
+        padding: 36px;
+    }
+
+    nav {
+        justify-content: flex-end;
+    }
+
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    img {
+        border-radius: 12px;
+    }
+}
+
+/* Utility classes */
+.center {
+    text-align: center;
+}
+
+.muted {
+    color: var(--muted);
+}
+
+/* Responsive layout adjustments */
+html {
+    overflow-x: hidden;
+}
+
+body {
+    min-width: 0;
+    overflow-x: hidden;
+}
+
+header,
+main,
+footer,
+.container {
+    width: 100%;
+}
+
+.container {
+    min-width: 0;
+}
+
+.grid,
+.about-grid,
+.map-grid {
+    min-width: 0;
+}
+
+.card,
+.about-item,
+.about-details,
+nav,
+.nav-icons {
+    min-width: 0;
+}
+
+.store-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.about-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 767px) {
+    header {
+        margin: 10px;
+        width: calc(100% - 20px);
+        padding: 18px 10px;
+    }
+
+    header .container {
+        padding: 8px;
+    }
+
+    header .container > div:last-child {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    header h1 {
+        font-size: clamp(1.15rem, 5vw, 1.5rem);
+        overflow-wrap: anywhere;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 4px;
+        padding: 4px 0;
+    }
+
+    nav a {
+        padding: 7px 6px;
+        font-size: 0.9rem;
+    }
+
+    .nav-icons {
+        gap: 6px;
+    }
+
+    .about-item {
+        flex-direction: column;
+    }
+
+    .about-item img {
+        width: min(220px, 100%);
+    }
+
+    .price {
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        max-width: 100%;
+    }
+
+    .store-table th,
+    .store-table td {
+        padding: 9px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    header {
+        padding: 22px 12px;
+    }
+
+    header .container > div:last-child {
+        flex: 1 1 100%;
+        justify-content: space-between;
+    }
+
+    nav {
+        justify-content: flex-start;
+    }
+}
+/* Main colours used throughout the website */
+:root {
+    --background: #0f1724;
+    --card: #0b1220;
+    --accent: #ff6b6b;
+    --text: #e6eef8;
+    --muted: #94a3b8;
+}
+
+/* Basic page layout */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #071427, #0f1724);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* Keeps the website content centred */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 18px;
+}
+
+/* Website heading and navigation */
+header {
+    padding: 28px 12px;
+    margin: 18px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 6px;
+}
+
+header p {
+    color: var(--muted);
+}
+
+/* Navigation links */
+nav {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    padding: 8px;
+}
+
+nav a {
+    color: var(--text);
+    text-decoration: none;
+    padding: 8px 12px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+/* The product section displays items in cards */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+}
+
+.card {
+    background: var(--card);
+    padding: 18px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+}
+
+/* Moves the card slightly when the mouse is over it */
+.card:hover {
+    transform: translateY(-2px);
+}
+
+/* Product prices and discounts */
+.price {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.original {
+    color: #777;
+    text-decoration: line-through;
+}
+
+.sale {
+    color: var(--accent);
+}
+
+.discount-badge {
+    background: var(--accent);
+    color: #07101a;
+    padding: 6px 8px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* About page layout */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+.about-item {
+    display: flex;
+    gap: 14px;
+}
+
+.about-item img {
+    width: 220px;
+}
+
+.about-details {
+    color: var(--muted);
+}
+
+/* Store information table */
+.store-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+}
+
+.store-table th,
+.store-table td {
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 12px;
+    text-align: left;
+}
+
+/* Map section */
+.map-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+.map-wrap {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.map-wrap iframe {
+    width: 100%;
+    height: 260px;
+    border: 0;
+}
+
+/* Buttons used on the website */
+.btn {
+    background: var(--accent);
+    color: #111;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Form input fields */
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: transparent;
+    color: var(--text);
+}
+
+/* Footer at the bottom of each page */
+footer {
+    color: var(--muted);
+    text-align: center;
+    padding: 18px;
+    margin-top: 22px;
+}
+
+/* Tablet screen */
+@media (min-width: 600px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop screen */
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    nav {
+        justify-content: flex-end;
+    }
+}
+
+/* Small helper classes */
+.center {
+    text-align: center;
+}
+
+.muted {
+    color: var(--muted);
+}

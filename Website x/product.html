@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Products</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+            <div>
+                <h1>Our Products</h1>
+            </div>
+
+            <div style="display:flex;align-items:center;gap:12px">
+                <nav>
+                    <a href="index.html">Home</a> |
+                    <a href="about.html">About Us</a> |
+                    <a href="product.html">Products</a> |
+                    <a href="contact.html">Contact</a>
+                </nav>
+
+                <div class="nav-icons">
+                    <a class="icon-btn" href="#" aria-label="Instagram">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.2"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.2"/></svg>
+                    </a>
+                    <a class="icon-btn" href="#" aria-label="Facebook">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 2h-3a4 4 0 0 0-4 4v3H8v4h3v8h4v-8h3l1-4h-4V6a1 1 0 0 1 1-1h3V2z" stroke="currentColor" stroke-width="1" fill="none"/></svg>
+                    </a>
+                    <a class="icon-btn" href="#" id="cart-btn" aria-label="Cart">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 6h15l-1.5 9h-12L4 2H2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <span id="cart-count" style="margin-left:6px;font-weight:800">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="center">
+            <h2>Featured Products</h2>
+            <p class="muted">Hand-picked pieces — premium look, affordable price.</p>
+        </section>
+
+        <section class="grid" aria-label="Products">
+
+            <article class="card">
+                <div class="discount discount-badge">-22%</div>
+                <img src="images/deep.jpeg" alt="Haute Couture T-Shirt">
+                <h3>Classic Haute Couture T-Shirt</h3>
+                <p class="muted">Comfortable, stylish, and designed for everyday wear.</p>
+                <p class="price"><span class="original">R320</span> <span class="sale">R250</span></p>
+                <div style="display:flex;gap:10px;align-items:center;">
+                    <button class="btn add-to-cart" data-name="Classic T-Shirt" data-price="250">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 6h15l-1.5 9h-12L4 2H2" stroke="#08101a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        Add to cart
+                    </button>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="discount discount-badge">-20%</div>
+                <img src="images/tshirt1.jpeg" alt="Premium T-Shirt">
+                <h3>Premium Graphic Tee</h3>
+                <p class="muted">Modern fashion for individuals who love unique designs.</p>
+                <p class="price"><span class="original">R375</span> <span class="sale">R300</span></p>
+                <div style="display:flex;gap:10px;align-items:center;">
+                    <button class="btn add-to-cart" data-name="Premium Graphic Tee" data-price="300">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 6h15l-1.5 9h-12L4 2H2" stroke="#08101a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        Add to cart
+                    </button>
+                </div>
+            </article>
+        </section>
+
+        <section class="center" style="margin-top:22px">
+            <h3>Coming Soon</h3>
+            <ul>
+                <li>Hoodies</li>
+                <li>Tracksuits</li>
+                <li>Caps</li>
+                <li>Accessories</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>Quality Fashion | Affordable Prices</p>
+        </footer>
+    </main>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>
