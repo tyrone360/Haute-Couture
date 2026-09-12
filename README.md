@@ -14,7 +14,6 @@ The website allows customers to view products, check prices, see discounts, and 
 - **Contact** – Provides contact information for customers.
 
 ## Technologies Used
-
 - HTML
 - CSS
 
@@ -39,9 +38,3 @@ The website allows customers to view products, check prices, see discounts, and 
 ## Purpose of the Project
 
 The purpose of this project is to demonstrate basic web development skills using HTML and CSS. It also shows how a simple online shop can be designed for customers.
-
-## Author
-
-**Tyrone**
-
-IT Software Development Student
