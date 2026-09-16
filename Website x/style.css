@@ -27,7 +27,7 @@ body {
     margin: auto;
     padding: 18px;
 }
-
+/*..*/
 /* Header */
 header {
     padding: 28px 12px;
@@ -90,7 +90,7 @@ nav a:hover {
 .icon-btn:hover {
     color: var(--accent);
 }
-
+/*..*/
 /* Headings and paragraphs */
 h2 {
     font-size: 1.25rem;
