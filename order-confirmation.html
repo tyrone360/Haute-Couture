@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Order Confirmation | Haute Couture EST. SA</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            color: #222;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .confirmation-container {
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .brand {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 25px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .confirmation-card {
+            background: white;
+            border-radius: 14px;
+            padding: 35px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+        }
+
+        .success-icon {
+            width: 75px;
+            height: 75px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background: #e6f8ed;
+            color: #159447;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 38px;
+        }
+
+        .heading {
+            text-align: center;
+            margin-bottom: 12px;
+        }
+
+        .heading h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .heading p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .order-number {
+            background: #f5f5f5;
+            padding: 18px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 25px 0;
+        }
+
+        .order-number small {
+            color: #777;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .order-number strong {
+            font-size: 21px;
+            letter-spacing: 1px;
+        }
+
+        .section {
+            margin-top: 28px;
+        }
+
+        .section h2 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 12px;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+
+        .detail-row span:first-child {
+            color: #666;
+        }
+
+        .detail-row span:last-child {
+            text-align: right;
+            overflow-wrap: anywhere;
+        }
+
+        .product-item {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            padding: 13px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .product-item span:first-child {
+            font-weight: 500;
+        }
+
+        .product-item span:last-child {
+            white-space: nowrap;
+        }
+
+        .total-row {
+            font-size: 18px;
+            font-weight: bold;
+            border-top: 1px solid #ddd;
+            margin-top: 10px;
+            padding-top: 18px;
+        }
+
+        .status {
+            display: inline-block;
+            background: #fff2d8;
+            color: #966000;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .notice {
+            background: #f7f7f7;
+            padding: 16px;
+            border-radius: 8px;
+            margin-top: 25px;
+            color: #555;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .shop-button {
+            display: block;
+            background: #111;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            padding: 15px;
+            border-radius: 7px;
+            margin-top: 30px;
+            transition: 0.3s;
+        }
+
+        .shop-button:hover {
+            background: #444;
+        }
+
+        .footer {
+            text-align: center;
+            color: #888;
+            font-size: 12px;
+            margin-top: 25px;
+        }
+
+        @media (max-width: 550px) {
+            body {
+                padding: 20px 12px;
+            }
+
+            .confirmation-card {
+                padding: 22px 17px;
+            }
+
+            .heading h1 {
+                font-size: 23px;
+            }
+
+            .detail-row,
+            .product-item {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="confirmation-container">
+
+        <div class="brand">
+            HAUTE COUTURE EST. SA
+        </div>
+
+        <div class="confirmation-card">
+
+            <div class="success-icon">✓</div>
+
+            <div class="heading">
+                <h1>Thank You for Your Order!</h1>
+
+                <p>
+                    Your order has been successfully submitted.
+                    We appreciate your support.
+                </p>
+            </div>
+
+            <div class="order-number">
+                <small>YOUR ORDER NUMBER</small>
+                <strong id="order-id">Loading...</strong>
+            </div>
+
+            <div class="section">
+                <h2>Order Status</h2>
+
+                <span class="status" id="order-status">
+                    Pending confirmation
+                </span>
+            </div>
+
+            <div class="section">
+                <h2>Customer Information</h2>
+
+                <div id="customer-details"></div>
+            </div>
+
+            <div class="section">
+                <h2>Delivery Information</h2>
+
+                <div id="delivery-details"></div>
+            </div>
+
+            <div class="section">
+                <h2>Products Ordered</h2>
+
+                <div id="order-items"></div>
+            </div>
+
+            <div class="section">
+                <h2>Payment Summary</h2>
+
+                <div id="payment-summary"></div>
+            </div>
+
+            <div class="notice">
+                <strong>What's next?</strong><br>
+                Our team will contact you to confirm your
+                order and arrange payment and delivery.
+                Please keep your order number for reference.
+            </div>
+
+            <a href="index.html" class="shop-button">
+                Continue Shopping
+            </a>
+
+        </div>
+
+        <div class="footer">
+            © 2026 Haute Couture EST. SA. All rights reserved.
+        </div>
+
+    </main>
+
+    <script>
+        const order = JSON.parse(
+            sessionStorage.getItem('orderConfirmationData') || 'null'
+        );
+
+        const money = (amount) =>
+            `R${Number(amount || 0).toFixed(2)}`;
+
+        const safe = (value) =>
+            String(value ?? '').replace(/[&<>"']/g, char => ({
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#39;'
+            })[char]);
+
+        if (!order) {
+
+            document.querySelector('.confirmation-card').innerHTML = `
+                <h1>Order information unavailable</h1>
+                <p>
+                    We could not find your order details.
+                    Please return to the shopping page.
+                </p>
+                <a href="index.html" class="shop-button">
+                    Return to Home
+                </a>
+            `;
+
+        } else {
+
+            document.getElementById('order-id').textContent =
+                order.orderId;
+
+            document.getElementById('order-status').textContent =
+                order.status || 'Pending confirmation';
+
+            document.getElementById('customer-details').innerHTML = `
+                <div class="detail-row">
+                    <span>Full name</span>
+                    <span>${safe(order.fullName)}</span>
+                </div>
+
+                <div class="detail-row">
+                    <span>Email</span>
+                    <span>${safe(order.email)}</span>
+                </div>
+
+                <div class="detail-row">
+                    <span>Phone</span>
+                    <span>${safe(order.phone)}</span>
+                </div>
+            `;
+
+            document.getElementById('delivery-details').innerHTML = `
+                <div class="detail-row">
+                    <span>Address</span>
+                    <span>
+                        ${safe(order.address)},
+                        ${safe(order.city)},
+                        ${safe(order.state)},
+                        ${safe(order.zip)},
+                        ${safe(order.country)}
+                    </span>
+                </div>
+
+                <div class="detail-row">
+                    <span>Delivery notes</span>
+                    <span>${safe(order.notes || 'None')}</span>
+                </div>
+            `;
+
+            document.getElementById('order-items').innerHTML =
+                (order.items || []).map(item => `
+                    <div class="product-item">
+                        <span>${safe(item.name)}</span>
+                        <span>${money(item.price)}</span>
+                    </div>
+                `).join('');
+
+            document.getElementById('payment-summary').innerHTML = `
+                <div class="detail-row">
+                    <span>Subtotal</span>
+                    <span>${money(order.subtotal)}</span>
+                </div>
+
+                <div class="detail-row">
+                    <span>Delivery fee</span>
+                    <span>${money(order.shipping)}</span>
+                </div>
+
+                <div class="detail-row total-row">
+                    <span>Total</span>
+                    <span>${money(order.total)}</span>
+                </div>
+            `;
+        }
+    </script>
+
+</body>
+</html>

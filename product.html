@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Haute Couture</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-row">
+            <div class="logo-wrap" aria-label="Haute Couture home">
+                <span class="logo-mark">HC</span>
+                <div>
+                    <strong>HAUTE COUTURE</strong>
+                    <small>EST. SA</small>
+                </div>
+            </div>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="product.html">Shop</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="nav-icons">
+                <a class="icon-btn" href="#" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.2"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.2"/></svg>
+                </a>
+                <a class="icon-btn" href="#" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 2h-3a4 4 0 0 0-4 4v3H8v4h3v8h4v-8h3l1-4h-4V6a1 1 0 0 1 1-1h3V2z" stroke="currentColor" stroke-width="1" fill="none"/></svg>
+                </a>
+                <a class="icon-btn" href="cart.html" id="cart-btn" aria-label="Cart">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 6h15l-1.5 9h-12L4 2H2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span id="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container page-space">
+        <section class="section-head centered-head">
+            <div>
+                <span class="eyebrow muted">New arrivals</span>
+                <h2>Featured products</h2>
+            </div>
+        </section>
+
+        <section class="grid product-grid" aria-label="Products">
+            <article class="product-card card">
+                <span class="product-badge">-22%</span>
+                <img src="images/deep.jpeg" alt="Haute Couture T-Shirt">
+                <div class="product-info">
+                    <h3>Classic Haute Tee</h3>
+                    <p>Comfortable, stylish, and designed for everyday wear.</p>
+                    <div class="product-bottom">
+                        <div class="price-wrap">
+                            <span class="original">R320</span>
+                            <span class="sale">R250</span>
+                        </div>
+                        <button class="btn add-to-cart" type="button" data-name="Classic T-Shirt" data-price="250" data-image="images/deep.jpeg">Add to cart</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card card">
+                <span class="product-badge">-20%</span>
+                <img src="images/tshirt1.jpeg" alt="Premium T-Shirt">
+                <div class="product-info">
+                    <h3>Premium Graphic Tee</h3>
+                    <p>Modern fashion for individuals who love unique designs.</p>
+                    <div class="product-bottom">
+                        <div class="price-wrap">
+                            <span class="original">R375</span>
+                            <span class="sale">R300</span>
+                        </div>
+                        <button class="btn add-to-cart" type="button" data-name="Premium Graphic Tee" data-price="300" data-image="images/tshirt1.jpeg">Add to cart</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card card">
+                <span class="product-badge">New</span>
+                <img src="images/Hoodie.jpeg" alt="Hoodie product">
+                <div class="product-info">
+                    <h3>Hoodie</h3>
+                    <p>Warm, premium, and made for all-day comfort.</p>
+                    <div class="product-bottom">
+                        <div class="price-wrap">
+                            <span class="sale">R420</span>
+                        </div>
+                        <button class="btn add-to-cart" type="button" data-name="Hoodie" data-price="420" data-image="images/nkuna.jpeg">Add to cart</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card card">
+                <span class="product-badge">Hot</span>
+                <img src="images/Trouser.jpeg" alt="Trouser product">
+                <div class="product-info">
+                    <h3>Trouser</h3>
+                    <p>Clean tailoring with a relaxed, modern streetwear finish.</p>
+                    <div class="product-bottom">
+                        <div class="price-wrap">
+                            <span class="sale">R480</span>
+                        </div>
+                        <button class="btn add-to-cart" type="button" data-name="Trouser" data-price="480" data-image="images/deep.jpeg">Add to cart</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card card">
+                <span class="product-badge">Limited</span>
+                <img src="images/New Design.jpeg" alt="New Design product">
+                <div class="product-info">
+                    <h3>New Design</h3>
+                    <p>Statement styling with a fresh silhouette and premium feel.</p>
+                    <div class="product-bottom">
+                        <div class="price-wrap">
+                            <span class="sale">R360</span>
+                        </div>
+                        <button class="btn add-to-cart" type="button" data-name="New Design" data-price="360" data-image="images/New Design.jpeg">Add to cart</button>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="center page-space-sm">
+            <ul class="feature-list compact-list">
+                <li>Trouser</li>
+                <li>New Design</li>
+                <li>Hoodie</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>Quality fashion | Affordable prices</p>
+            <p>Fresh drop 2026</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

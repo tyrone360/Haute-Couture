@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Haute Couture</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-row">
+            <div class="logo-wrap" aria-label="Haute Couture home">
+                <span class="logo-mark">HC</span>
+                <div>
+                    <strong>HAUTE COUTURE</strong>
+                    <small>EST. SA</small>
+                </div>
+            </div>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="product.html">Shop</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="nav-icons">
+                <a class="icon-btn" href="#" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.2"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.2"/></svg>
+                </a>
+                <a class="icon-btn" href="#" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 2h-3a4 4 0 0 0-4 4v3H8v4h3v8h4v-8h3l1-4h-4V6a1 1 0 0 1 1-1h3V2z" stroke="currentColor" stroke-width="1" fill="none"/></svg>
+                </a>
+                <a class="icon-btn" href="cart.html" id="cart-btn" aria-label="Cart">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 6h15l-1.5 9h-12L4 2H2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span id="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container page-space">
+        <section class="section-head">
+            <div>
+                <span class="eyebrow muted">Talk to us</span>
+                <h2>Get in touch</h2>
+            </div>
+        </section>
+
+        <section class="contact-layout">
+            <div class="card contact-panel">
+                <form id="contact-form" class="checkout-form">
+                    <label>Full name</label>
+                    <input type="text" name="name" placeholder="Your full name" required>
+
+                    <label>Email address</label>
+                    <input type="email" name="email" placeholder="you@example.com" required>
+
+                    <label>Message</label>
+                    <textarea name="message" rows="5" placeholder="Tell us what you need" required></textarea>
+
+                    <button class="btn" type="submit">Send message</button>
+                </form>
+            </div>
+
+            <aside class="card contact-info">
+                <h3>Contact details</h3>
+                <p>Phone: +27 61 439 0074</p>
+                <p>Email: info@hautecouture.co.za</p>
+                <p>Instagram: @hautecouture_sa</p>
+                <p>Facebook: Haute Couture Est. SA</p>
+            </aside>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>Thank you for visiting Haute Couture Est. SA</p>
+            <p>We’re here to help.</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        emailjs.init({
+            publicKey: "jrdAX27VnR-pmEL1x"
+        });
+
+        document.getElementById("contact-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            emailjs.sendForm("service_xosfsw7", "template_7f3q2uq", this)
+                .then(function () {
+                    alert("Your message has been sent successfully.");
+                    document.getElementById("contact-form").reset();
+                })
+                .catch(function (error) {
+                    console.error("EmailJS error:", error);
+                    alert("Something went wrong. Please try again.");
+                });
+        });
+    </script>
+</body>
+</html>
