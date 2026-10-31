@@ -19,6 +19,7 @@ The website allows customers to view products, check prices, see discounts, and 
 
 // Main Features
 
+
 - Simple navigation menu
 - Product cards
 - Product prices and discounts
@@ -28,6 +29,7 @@ The website allows customers to view products, check prices, see discounts, and 
 - Clean and simple layout
 
 // How to Run the Website
+
 
 1. Download or copy the project folder.
 2. Open the folder in **Visual Studio Code**.
