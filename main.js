@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', () => {
   const cartCountEl = document.getElementById('cart-count');
   const cartBtn = document.getElementById('cart-btn');
@@ -18,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const promoSecondsEl = document.getElementById('promo-seconds');
 
   let lightbox = document.getElementById('product-lightbox');
-
+//
   const CART_KEY = 'fashionCart';
   const COUNT_KEY = 'cartCount';
   const ORDER_KEY = 'latestOrder';
@@ -31,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const formatCurrency = (value) =>
     `R${Number(value || 0).toFixed(2)}`;
 
-  // Escape HTML to protect displayed customer and product information.
   const escapeHTML = (value) =>
     String(value ?? '').replace(/[&<>"']/g, (char) => ({
       '&': '&amp;',
@@ -40,10 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
       '"': '&quot;',
       "'": '&#39;'
     })[char]);
-
-  // ==========================================
-  // PRODUCT INTERACTIONS
-  // ==========================================
 
   const initProductInteractions = () => {
     const productCards = document.querySelectorAll('.product-card');
@@ -116,10 +110,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   };
-
-  // ==========================================
-  // HERO SLOGAN ANIMATION
-  // ==========================================
 
   const rotateHeroSlogans = () => {
     if (!heroSloganEl) return;
