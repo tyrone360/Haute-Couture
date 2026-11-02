@@ -50,10 +50,37 @@ document.addEventListener('DOMContentLoaded', () => {
         const rect = card.getBoundingClientRect();
         const x = event.clientX - rect.left;
         const y = event.clientY - rect.top;
+const initPromoCountdown = () => {
+  if (!promoDaysEl || !promoHoursEl || !promoMinutesEl || !promoSecondsEl) return;
 
-        const rotateY = ((x / rect.width) - 0.5) * 9;
-        const rotateX = (0.5 - (y / rect.height)) * 9;
+  // Promotion ends on 16 June 2027 at 23:59 South African time.
+  const countdownTarget = new Date('2027-06-16T23:59:00+02:00').getTime();
 
+  const updateCountdown = () => {
+    const remaining = countdownTarget - Date.now();
+
+    if (remaining <= 0) {
+      promoDaysEl.textContent = '00';
+      promoHoursEl.textContent = '00';
+      promoMinutesEl.textContent = '00';
+      promoSecondsEl.textContent = '00';
+      return;
+    }
+
+    const days = Math.floor(remaining / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((remaining / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((remaining / (1000 * 60)) % 60);
+    const seconds = Math.floor((remaining / 1000) % 60);
+
+    promoDaysEl.textContent = String(days).padStart(2, '0');
+    promoHoursEl.textContent = String(hours).padStart(2, '0');
+    promoMinutesEl.textContent = String(minutes).padStart(2, '0');
+    promoSecondsEl.textContent = String(seconds).padStart(2, '0');
+  };
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+};
         card.style.transform =
           `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-2px)`;
 
