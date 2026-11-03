@@ -1,416 +1,435 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Haute Couture Est. SA | Premium Streetwear</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MinePulse — Home</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
 
-    <header class="site-header">
-        <div class="container header-row">
+<body data-page="home">
 
-            <div class="logo-wrap" aria-label="Haute Couture Est SA home">
-                <span class="logo-mark">HC</span>
-                <div>
-                    <strong>HAUTE COUTURE</strong>
-                    <small>EST. SA</small>
-                </div>
+  <div class="scene">
+    <div class="scene__spark spark--one"></div>
+    <div class="scene__spark spark--two"></div>
+    <div class="scene__spark spark--three"></div>
+    <div class="scene__spark spark--four"></div>
+    <div class="scene__orb orb--one"></div>
+    <div class="scene__orb orb--two"></div>
+    <div class="scene__orb orb--three"></div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <a class="brand" href="index.html">MinePulse</a>
+
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="cart.html">Cart <span class="cart-count">0</span></a>
+      <a href="location.html">Location</a>
+      <a href="about.html">About</a>
+    </nav>
+
+    <a class="button button--secondary" href="shop.html">Shop now</a>
+  </header>
+
+  <main>
+
+    <!-- HERO SECTION -->
+    <section class="hero hero--home">
+      <div class="hero__copy">
+        <span class="eyebrow">Live Mining Market</span>
+
+        <h1>Welcome to the most insane floating mine shop on the web.</h1>
+
+        <p>
+          Experience a multi-page mining storefront where minerals drift,
+          carts persist, and delivery details follow every order.
+        </p>
+
+        <div class="hero__actions">
+          <a class="button button--primary" href="shop.html">Browse materials</a>
+          <a class="button button--secondary" href="cart.html">Review cart</a>
+        </div>
+      </div>
+
+      <div class="hero__preview">
+        <div class="preview-card preview-card--big">
+          <strong>Volcanic Crystal</strong>
+          <span>Glowing core stone with molten energy.</span>
+        </div>
+
+        <div class="preview-card preview-card--medium">
+          <strong>Mineral Bundle</strong>
+          <span>Bulk ore for serious mining expeditions.</span>
+        </div>
+
+        <div class="preview-card preview-card--small">
+          <strong>Electric Shard</strong>
+          <span>Charged power for advanced build projects.</span>
+        </div>
+
+        <div class="category-card">
+          <h3>Shards</h3>
+          <p>High-energy minerals for advanced builds.</p>
+        </div>
+
+        <div class="category-card">
+          <h3>Transportation</h3>
+          <p>Advanced transportation solutions for mining operations.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ALL PRODUCTS SECTION -->
+    <section class="section section--products reveal">
+
+      <div class="section__heading">
+        <strong>Explore MinePulse</strong>
+        <h2>Discover our mineral collection.</h2>
+        <p>
+          Explore our featured minerals and add your favourites
+          directly to your shopping cart.
+        </p>
+      </div>
+
+      <div class="product-grid">
+
+        <!-- PRODUCT 1 -->
+        <article class="product-card" data-product-id="1">
+          <div class="product-image image--rock1"></div>
+
+          <div class="product-card__content">
+            <h3>Volcanic Crystal</h3>
+            <p>Glowing core stone with molten energy.</p>
+            <strong class="product-price">$24.00</strong>
+
+            <button class="button button--secondary add-to-cart" type="button">
+              <i class="fas fa-shopping-cart"></i> Add to cart
+            </button>
+          </div>
+        </article>
+
+        <!-- PRODUCT 2 -->
+        <article class="product-card" data-product-id="2">
+          <div class="product-image image--rock2"></div>
+
+          <div class="product-card__content">
+            <h3>Mineral Ore Bundle</h3>
+            <p>A premium collection of raw mineral materials.</p>
+            <strong class="product-price">$36.00</strong>
+
+            <button class="button button--secondary add-to-cart" type="button">
+              <i class="fas fa-shopping-cart"></i> Add to cart
+            </button>
+          </div>
+        </article>
+
+        <!-- PRODUCT 3 -->
+        <article class="product-card" data-product-id="3">
+          <div class="product-image image--rock3"></div>
+
+          <div class="product-card__content">
+            <h3>Electric Shard</h3>
+            <p>Charged mineral shard for advanced projects.</p>
+            <strong class="product-price">$52.00</strong>
+
+            <button class="button button--secondary add-to-cart" type="button">
+              <i class="fas fa-shopping-cart"></i> Add to cart
+            </button>
+          </div>
+        </article>
+
+        <!-- PRODUCT 4 -->
+        <article class="product-card" data-product-id="4">
+          <div class="product-image image--rock4"></div>
+
+          <div class="product-card__content">
+            <h3>Meteor Stone</h3>
+            <p>A rare stone inspired by the depths of space.</p>
+            <strong class="product-price">$69.00</strong>
+
+            <button class="button button--secondary add-to-cart" type="button">
+              <i class="fas fa-shopping-cart"></i> Add to cart
+            </button>
+          </div>
+        </article>
+
+        <!-- PRODUCT 5 -->
+        <article class="product-card" data-product-id="5">
+          <div class="product-image image--rock5"></div>
+
+          <div class="product-card__content">
+            <h3>Lava Dust Pack</h3>
+            <p>Fine volcanic material for your collection.</p>
+            <strong class="product-price">$18.00</strong>
+
+            <button class="button button--secondary add-to-cart" type="button">
+              <i class="fas fa-shopping-cart"></i> Add to cart
+            </button>
+          </div>
+        </article>
+
+        <!-- PRODUCT 6 -->
+        <article class="product-card" data-product-id="6">
+          <div class="product-image image--rock6"></div>
+
+          <div class="product-card__content">
+            <h3>Quartz Cluster</h3>
+            <p>A distinctive crystal formation for collectors.</p>
+            <strong class="product-price">$28.00</strong>
+
+            <button class="button button--secondary add-to-cart" type="button">
+              <i class="fas fa-shopping-cart"></i> Add to cart
+            </button>
+          </div>
+        </article>
+
+        <!-- PRODUCT 7 -->
+        <article class="product-card" data-product-id="7">
+          <div class="product-image image--rock7"></div>
+
+          <div class="product-card__content">
+            <h3>Obsidian Ridge</h3>
+            <p>A dark and striking mineral collection piece.</p>
+            <strong class="product-price">$42.00</strong>
+
+            <button class="button button--secondary add-to-cart" type="button">
+              <i class="fas fa-shopping-cart"></i> Add to cart
+            </button>
+          </div>
+        </article>
+
+        <!-- PRODUCT 8 -->
+        <article class="product-card" data-product-id="8">
+          <div class="product-image image--rock8"></div>
+
+          <div class="product-card__content">
+            <h3>Celestial Fragment</h3>
+            <p>An unusual fragment for a premium collection.</p>
+            <strong class="product-price">$58.00</strong>
+
+            <button class="button button--secondary add-to-cart" type="button">
+              <i class="fas fa-shopping-cart"></i> Add to cart
+            </button>
+          </div>
+        </article>
+
+        <!-- PRODUCT 9 -->
+        <article class="product-card" data-product-id="9">
+          <div class="product-image image--rock9"></div>
+
+          <div class="product-card__content">
+            <h3>Rift Stone</h3>
+            <p>A unique mineral with a bold appearance.</p>
+            <strong class="product-price">$33.00</strong>
+
+            <button class="button button--secondary add-to-cart" type="button">
+              <i class="fas fa-shopping-cart"></i> Add to cart
+            </button>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="hero__actions">
+        <a class="button button--primary" href="shop.html">
+          View All Products <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+    </section>
+
+
+    <!-- WHY MINEPULSE -->
+    <section class="section section--intro reveal">
+
+      <div class="section__heading">
+        <strong>Why MinePulse?</strong>
+        <h2>A multi-page mining marketplace built for immersive shopping.</h2>
+      </div>
+
+      <div class="feature-grid">
+
+        <div class="feature-card">
+          <h3>Animated storefront</h3>
+          <p>Float through a living geology experience while you browse mineral products.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Persistent cart</h3>
+          <p>Add items on the shop page and carry them through checkout across pages.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Delivery details</h3>
+          <p>Save address information and use it when preparing your orders.</p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- SLIDESHOW -->
+    <section class="section section--slider reveal">
+
+      <div class="section__heading">
+        <strong>Vault visuals</strong>
+        <h2>See MinePulse’s hidden mining galleries in a cinematic image slideshow.</h2>
+      </div>
+
+      <div class="gallery-slider">
+
+        <div class="slider-track">
+
+          <article class="slide-item active"
+            style="background-image: url('image/adriano-qCB_-fzt35s-unsplash.jpg');">
+
+            <div class="slide-copy">
+              <span>Origin vault</span>
+              <h3>Raw earth, refined into rare goods</h3>
+              <p>Discover the dramatic mineral world behind every MinePulse shipment.</p>
             </div>
+          </article>
 
-            <nav class="main-nav" aria-label="Main navigation">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </nav>
+          <article class="slide-item"
+            style="background-image: url('image/ben-ostrower-BM4FXbz2Xt0-unsplash.jpg');">
 
-            <div class="nav-icons">
-                <a class="icon-btn" href="#" aria-label="Instagram">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="3" y="3" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.2"/>
-                        <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.2"/>
-                    </svg>
-                </a>
-
-                <a class="icon-btn" href="#" aria-label="Facebook">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M18 2h-3a4 4 0 0 0-4 4v3H8v4h3v8h4v-8h3l1-4h-4V6a1 1 0 0 1 1-1h3V2z" stroke="currentColor" stroke-width="1" fill="none"/>
-                    </svg>
-                </a>
-
-                <a class="icon-btn" href="cart.html" id="cart-btn" aria-label="Cart">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M6 6h15l-1.5 9h-12L4 2H2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <span id="cart-count">0</span>
-                </a>
+            <div class="slide-copy">
+              <span>Foundations</span>
+              <h3>Forged from ancient quarry routes</h3>
+              <p>Every shipment starts with deep geology, hand-selected for quality.</p>
             </div>
+          </article>
+
+          <article class="slide-item"
+            style="background-image: url('image/dominik-vanyi-Mk2ls9UBO2E-unsplash.jpg');">
+
+            <div class="slide-copy">
+              <span>Expedition</span>
+              <h3>From crater edge to curated crate</h3>
+              <p>The MinePulse experience blends dramatic visuals with trusted delivery.</p>
+            </div>
+          </article>
+
+          <article class="slide-item"
+            style="background-image: url('image/vladimir-patkachakov-Mx6Xmf_nbRk-unsplash.jpg');">
+
+            <div class="slide-copy">
+              <span>Momentum</span>
+              <h3>Modern mineral sourcing for next-level builds</h3>
+              <p>Our gallery proves the scale and quality of every mining haul.</p>
+            </div>
+          </article>
 
         </div>
-    </header>
 
-    <main>
-
-        <!-- HERO SECTION -->
-        <section class="hero container">
-
-            <div class="hero-copy">
-                <span class="eyebrow">NEW SEASON 2026</span>
-
-                <h1 class="hero-headline" aria-live="polite">
-                    <span id="hero-slogan" class="headline-slogan"></span>
-                </h1>
-
-                <p>
-                    Premium streetwear for fearless energy, clean fits, and confidence that hits before you speak.
-                    Built for city movement and everyday identity.
-                </p>
-
-                <div class="hero-actions">
-                    <a class="primary-btn" href="#shop">Shop now</a>
-                    <a class="secondary-btn" href="about.html">Our story</a>
-                </div>
-
-                <div class="hero-stats">
-                    <div>
-                        <strong>2.4k+</strong>
-                        <span>Orders shipped</span>
-                    </div>
-
-                    <div>
-                        <strong>4.9/5</strong>
-                        <span>Customer love</span>
-                    </div>
-
-                    <div>
-                        <strong>24h</strong>
-                        <span>Fast delivery</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="hero-visual">
-                <div class="floating-card">
-                    <span>Editor's pick</span>
-                    <strong>Urban Luxe</strong>
-                    <small>Limited drop</small>
-                </div>
-
-                <img src="nkuna.jpeg" alt="Premium fashion model">
-            </div>
-
-        </section>
-
-        <!-- MOVING BRAND WORDS -->
-        <section class="scroll-words container" aria-label="Brand movement words">
-            <div class="scroll-words-track">
-                <span>MOVE</span>
-                <span>LIVE</span>
-                <span>LOUD</span>
-                <span>SHIFT</span>
-                <span>EDGE</span>
-                <span>RISE</span>
-                <span>STYLE</span>
-                <span>FUEL</span>
-            </div>
-        </section>
-
-        <!-- COMPLETE PRODUCT COLLECTION -->
-        <section class="container section-block" id="shop">
-
-            <div class="section-head">
-                <div>
-                    <span class="eyebrow muted">The collection</span>
-                    <h2>Shop all products</h2>
-                </div>
-
-                <span class="text-link">Fresh drops 2026</span>
-            </div>
-
-            <div class="product-grid">
-
-                <!-- PRODUCT 1 -->
-                <article class="product-card card">
-                    <span class="product-badge">-22%</span>
-
-                    <img src="deep.jpeg" alt="Classic Haute Tee">
-
-                    <div class="product-info">
-                        <h3>Classic Haute Tee</h3>
-                        <p>Comfortable, stylish, and designed for everyday wear.</p>
-
-                        <div class="product-bottom">
-                            <div class="price-wrap">
-                                <span class="original">R320</span>
-                                <span class="sale">R250</span>
-                            </div>
-
-                            <button class="btn add-to-cart"
-                                    type="button"
-                                    data-name="Classic T-Shirt"
-                                    data-price="250"
-                                    data-image="deep.jpeg">
-                                Add to cart
-                            </button>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- PRODUCT 2 -->
-                <article class="product-card card">
-                    <span class="product-badge">-20%</span>
-
-                    <img src="tshirt1.jpeg" alt="Premium Graphic Tee">
-
-                    <div class="product-info">
-                        <h3>Premium Graphic Tee</h3>
-                        <p>Modern fashion for individuals who love unique designs.</p>
-
-                        <div class="product-bottom">
-                            <div class="price-wrap">
-                                <span class="original">R375</span>
-                                <span class="sale">R300</span>
-                            </div>
-
-                            <button class="btn add-to-cart"
-                                    type="button"
-                                    data-name="Premium Graphic Tee"
-                                    data-price="300"
-                                    data-image="tshirt1.jpeg">
-                                Add to cart
-                            </button>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- PRODUCT 3 -->
-                <article class="product-card card">
-                    <span class="product-badge">New</span>
-
-                    <img src="hoodie.jpeg" alt="Hoodie">
-
-                    <div class="product-info">
-                        <h3>Hoodie</h3>
-                        <p>Warm, premium, and made for all-day comfort.</p>
-
-                        <div class="product-bottom">
-                            <div class="price-wrap">
-                                <span class="sale">R420</span>
-                            </div>
-
-                            <button class="btn add-to-cart"
-                                    type="button"
-                                    data-name="Hoodie"
-                                    data-price="420"
-                                    data-image="hoodie.jpeg">
-                                Add to cart
-                            </button>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- PRODUCT 4 -->
-                <article class="product-card card">
-                    <span class="product-badge">Hot</span>
-
-                    <img src="trouser.jpeg" alt="Trouser">
-
-                    <div class="product-info">
-                        <h3>Trouser</h3>
-                        <p>Clean tailoring with a relaxed, modern streetwear finish.</p>
-
-                        <div class="product-bottom">
-                            <div class="price-wrap">
-                                <span class="sale">R480</span>
-                            </div>
-
-                            <button class="btn add-to-cart"
-                                    type="button"
-                                    data-name="Trouser"
-                                    data-price="480"
-                                    data-image="trouser.jpeg">
-                                Add to cart
-                            </button>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- PRODUCT 5 -->
-                <article class="product-card card">
-                    <span class="product-badge">Limited</span>
-
-                    <img src="new%20design.jpeg" alt="New Design">
-
-                    <div class="product-info">
-                        <h3>New Design</h3>
-                        <p>Statement styling with a fresh silhouette and premium feel.</p>
-
-                        <div class="product-bottom">
-                            <div class="price-wrap">
-                                <span class="sale">R360</span>
-                            </div>
-
-                            <button class="btn add-to-cart"
-                                    type="button"
-                                    data-name="New Design"
-                                    data-price="360"
-                                    data-image="new%20design.jpeg">
-                                Add to cart
-                            </button>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- PRODUCT 6 -->
-                <article class="product-card card">
-                    <span class="product-badge">New</span>
-
-                    <img src="nkuna.jpeg" alt="Signature Layer">
-
-                    <div class="product-info">
-                        <h3>Signature Layer</h3>
-                        <p>Heavyweight comfort with a refined streetwear finish.</p>
-
-                        <div class="product-bottom">
-                            <div class="price-wrap">
-                                <span class="sale">R420</span>
-                            </div>
-
-                            <button class="btn add-to-cart"
-                                    type="button"
-                                    data-name="Signature Layer"
-                                    data-price="420"
-                                    data-image="nkuna.jpeg">
-                                Add to cart
-                            </button>
-                        </div>
-                    </div>
-                </article>
-
-            </div>
-        </section>
-
-        <!-- PROMOTIONAL BANNER -->
-        <section class="promo-banner container" aria-label="Flash sale promotion">
-
-            <div class="promo-inner">
-
-                <div class="promo-copy">
-                    <span class="eyebrow promo-label">Flash drop</span>
-                    <h2>75% OFF</h2>
-                    <p>Use code <strong>HAUTER26</strong> before the timer ends.</p>
-                </div>
-
-                <div class="promo-timer" aria-live="polite">
-                    <div>
-                        <span id="promo-days">00</span>
-                        <small>Days</small>
-                    </div>
-
-                    <div>
-                        <span id="promo-hours">00</span>
-                        <small>Hours</small>
-                    </div>
-
-                    <div>
-                        <span id="promo-minutes">00</span>
-                        <small>Minutes</small>
-                    </div>
-
-                    <div>
-                        <span id="promo-seconds">00</span>
-                        <small>Seconds</small>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- BRAND STRIP -->
-        <section class="brand-strip">
-            <div class="container brand-strip-inner">
-                <span>Premium cotton</span>
-                <span>Sport-inspired</span>
-                <span>Luxury finish</span>
-                <span>Modern cuts</span>
-                <span>Affordable style</span>
-            </div>
-        </section>
-
-        <!-- BRAND STORY -->
-        <section class="container story-section">
-
-            <div class="story-copy">
-                <span class="eyebrow muted">Why us</span>
-
-                <h2>Built for the culture. Designed for movement.</h2>
-
-                <p>
-                    We combine elevated design language with everyday wearability - premium fits, bold silhouettes,
-                    and standout details that make every outfit feel intentional.
-                </p>
-
-                <ul class="feature-list">
-                    <li>Premium fabric feel with everyday comfort</li>
-                    <li>Limited-run drops that stay fresh and relevant</li>
-                    <li>Made for streetwear lovers and urban trendsetters</li>
-                </ul>
-            </div>
-
-            <div class="story-cards culture-slider" aria-live="polite">
-
-                <div class="culture-slide active">
-                    <div class="culture-image">
-                        <img src="deep.jpeg" alt="Streetwear culture lifestyle">
-                    </div>
-
-                    <div class="culture-copy">
-                        <span class="slide-tag">Culture drop</span>
-                        <h3>Clean energy</h3>
-                        <p>Minimal styling, confident silhouettes, and the kind of pieces that set the tone before you speak.</p>
-                    </div>
-                </div>
-
-                <div class="culture-slide">
-                    <div class="culture-image">
-                        <img src="tshirt1.jpeg" alt="Modern fitted sportswear outfit">
-                    </div>
-
-                    <div class="culture-copy">
-                        <span class="slide-tag">Movement</span>
-                        <h3>Built to move</h3>
-                        <p>Comfort-first fits created for the pace of city life, everyday routines, and late-night energy.</p>
-                    </div>
-                </div>
-
-                <div class="culture-slide">
-                    <div class="culture-image">
-                        <img src="nkuna.jpeg" alt="Premium streetwear close-up">
-                    </div>
-
-                    <div class="culture-copy">
-                        <span class="slide-tag">Luxury finish</span>
-                        <h3>Made with intent</h3>
-                        <p>Every detail is tuned for the people who want presence, quality, and standout style without compromise.</p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="site-footer">
-        <div class="container footer-inner">
-            <p>© 2026 Haute Couture Est. SA</p>
-            <p>Designed for the bold.</p>
+        <div class="slider-controls">
+          <button class="slide-button prev" type="button">Previous</button>
+          <button class="slide-button next" type="button">Next</button>
         </div>
-    </footer>
 
-    <script src="main.js"></script>
+      </div>
+    </section>
+
+
+    <!-- FEATURED COLLECTIONS -->
+    <section class="section section--categories reveal">
+
+      <div class="section__heading">
+        <strong>Featured collections</strong>
+        <h2>Choose the materials for your next mining haul.</h2>
+      </div>
+
+      <div class="category-grid">
+
+        <div class="category-card">
+          <h3>Crystals</h3>
+          <p>Radiant cores and powered shards.</p>
+        </div>
+
+        <div class="category-card">
+          <h3>Ores</h3>
+          <p>Bulk materials tuned for extraction and supply.</p>
+        </div>
+
+        <div class="category-card">
+          <h3>Shards</h3>
+          <p>High-energy minerals for advanced builds.</p>
+        </div>
+
+        <div class="category-card">
+          <h3>Shred</h3>
+          <p>High-volume minerals for advanced builds and inventory renewal.</p>
+        </div>
+
+        <div class="category-card">
+          <h3>Based</h3>
+          <p>Energy for advanced builds.</p>
+        </div>
+
+        <div class="category-card">
+          <h3>Coaled</h3>
+          <p>Renewed mineral collections.</p>
+        </div>
+
+        <div class="category-card">
+          <h3>Mild</h3>
+          <p>High-energy minerals with powered shards.</p>
+        </div>
+
+        <div class="category-card">
+          <h3>Values</h3>
+          <p>Some of the most valuable minerals in our collection.</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+
+    <p>MinePulse • Your multi-page mining storefront with live cart and delivery tracking.</p>
+
+    <div class="contact-info">
+      <a href="mailto:tshungutyrone@gmail.com" class="contact-badge" title="Email">
+        <i class="fas fa-envelope"></i> tshungutyrone@gmail.com
+      </a>
+
+      <a href="https://wa.me/212694480217" target="_blank" rel="noopener" class="contact-badge" title="WhatsApp">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+    </div>
+
+    <div class="social-icons">
+      <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+
+      <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+
+      <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+
+  </footer>
+
+  <div class="toast" aria-live="polite"></div>
+
+  <script src="script.js"></script>
 
 </body>
 </html>
